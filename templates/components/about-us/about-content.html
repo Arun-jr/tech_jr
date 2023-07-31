@@ -1,0 +1,119 @@
+{% load static%}
+
+<div class="px-2 md:px-6 py-12 md:py-32 bg-secondary">
+  <div class="flex justify-center items-center">
+    <h3 class="text-3xl md:text-6xl mb-12 border-b-4 pb-2 px-2 w-fit">
+      About us
+    </h3>
+  </div>
+  <div class="flex justify-center items-center">
+    <div
+      class="w-full max-w-[1500px] flex justify-between items-center flex-wrap"
+    >
+      <div
+        class="w-full lg:w-[40%]"
+        data-aos="zoom-in-down"
+        data-aos-duration="1000"
+      >
+        <img
+          src="/media/Images/a1.jpg"
+          alt=""
+          class="rounded-tl-[3rem] rounded-br-[3rem] hover:scale-105 duration-500 shadow-2xl shadow-white overflow-hidden border p-1"
+        />
+      </div>
+      <div
+        class="w-full lg:w-[55%] mt-8 lg:mt-0"
+        data-aos="zoom-in-up"
+        data-aos-duration="1000"
+      >
+        <div
+          class="tab md:space-x-2 text-sm sm:text-lg md:text-2xl flex justify-center"
+        >
+          <button
+            class="tablinks p-2"
+            onclick="aboutTab(event, 'our_mission')"
+            id="defaultOpen"
+          >
+            Our mission
+          </button>
+          <button
+            class="tablinks p-2"
+            onclick="aboutTab(event, 'our_creation')"
+          >
+            Our Creation
+          </button>
+          <button
+            class="tablinks p-2"
+            onclick="aboutTab(event, 'our_analysis')"
+          >
+            Our Analysis
+          </button>
+        </div>
+
+        <div id="our_mission" class="tabcontent pt-8">
+          <h3 class="my-2 text-xl text-black font-medium">Our mission</h3>
+          <p class="text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel
+            turpis nunc eget lorem dolor. Morbi tristique senectus et netus et
+            malesuada fames.
+          </p>
+        </div>
+
+        <div id="our_creation" class="tabcontent pt-8">
+          <h3 class="my-2 text-xl text-black font-medium">
+            Our Creation
+          </h3>
+          <p class="text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel
+            turpis nunc eget lorem dolor. Morbi tristique senectus et netus et
+            malesuada fames.
+          </p>
+        </div>
+
+        <div id="our_analysis" class="tabcontent pt-8">
+          <h3 class="my-2 text-xl text-black font-medium">
+            Our Analysis
+          </h3>
+          <p class="text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel
+            turpis nunc eget lorem dolor. Morbi tristique senectus et netus et
+            malesuada fames.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+    }
+
+    /* Style the buttons inside the tab */
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #2f2f2f;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #000000;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+  </style>
+</div>
+
+<script src="{% static 'js/about.js' %}"></script>

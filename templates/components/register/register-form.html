@@ -1,0 +1,82 @@
+{% load static %}
+
+<div class="flex justify-center items-center">
+  <form
+    id="registerForm"
+    class="bg-secondary flex justify-evenly flex-wrap max-w-[1500px]"
+    method="post"
+  >
+    {% csrf_token %}
+    <div class="relative mt-10 w-full sm:w-[70%] mx-4 md:w-[40%]">
+      <input
+        name="reg_name"
+        type="text"
+        placeholder="Full Name"
+        id="reg_name"
+        class="regname border block px-2.5 pb-2.5 appearance-none bg-transparent bg-secondary focus:outline-none focus:ring-0 pt-4 w-full text-[15px] text-secondary rounded-lg peer"
+      />
+      <p id="reg_name_error" class="text-red-800 font-medium"></p>
+    </div>
+
+    <div class="relative mt-10 w-full sm:w-[70%] mx-4 md:w-[40%]">
+      <input
+        name="reg_email"
+        type="email"
+        placeholder="Email"
+        id="reg_email"
+        class="regemail border block px-2.5 bg-secondary pb-2.5 bg-transparent appearance-none focus:outline-none focus:ring-0 pt-4 w-full text-[15px] text-secondary rounded-lg peer"
+      />
+      <p id="reg_email_error" class="text-red-800 font-medium"></p>
+    </div>
+    <div class="relative mt-10 w-full sm:w-[70%] mx-4 md:w-[40%]">
+      <input
+        name="phone_number"
+        type="tel"
+        placeholder="Phone number"
+        id="phone_number"
+        class="regnumber border block px-2.5 bg-secondary pb-2.5 bg-transparent appearance-none focus:outline-none focus:ring-0 pt-4 w-full text-[15px] text-secondary rounded-lg peer"
+      />
+      <p id="reg_number_error" class="text-red-800 font-medium"></p>
+    </div>
+    <div class="relative mt-10 w-full sm:w-[70%] mx-4 md:w-[40%]">
+      <input
+        name="gender"
+        type="text"
+        placeholder="Gender (Male / Female)"
+        id="gender"
+        class="reggender border block px-2.5 bg-secondary pb-2.5 bg-transparent appearance-none focus:outline-none focus:ring-0 pt-4 w-full text-[15px] text-secondary rounded-lg peer"
+      />
+      <p id="reg_gender_error" class="text-red-800 font-medium"></p>
+    </div>
+
+    <div class="relative mt-10 w-full sm:w-[70%] mx-4 md:w-[40%]">
+      <input
+        name="collage"
+        type="text"
+        placeholder="collage/university"
+        id="collage"
+        class="regcollage border block px-2.5 bg-secondary pb-2.5 bg-transparent appearance-none focus:outline-none focus:ring-0 pt-4 w-full text-[15px] text-secondary rounded-lg peer"
+      />
+      <p id="reg_collage_error" class="text-red-800 font-medium"></p>
+    </div>
+    <div class="relative mt-10 w-full sm:w-[70%] mx-4 md:w-[40%]">
+      <input
+        name="course"
+        type="text"
+        placeholder="course"
+        id="course"
+        class="regcourse border block px-2.5 bg-secondary pb-2.5 bg-transparent appearance-none focus:outline-none focus:ring-0 pt-4 w-full text-[15px] text-secondary rounded-lg peer"
+      />
+      <p id="reg_course_error" class="text-red-800 font-medium"></p>
+    </div>
+
+    <button
+      type="submit"
+      class="text-center font-bold shadow-lg shadow-white/40 hover:bg-white/30 border h-14 flex justify-center items-center  text-[15px] capitalize rounded-lg my-24 w-[50%] md:w-[30%]"
+    >
+      Register
+    </button>
+  </form>
+</div>
+
+<script src="{% static  'js/register-form.js' %}"></script>

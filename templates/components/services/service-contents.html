@@ -1,0 +1,65 @@
+{% load static %}
+
+<div class="bg-secondary text-secondary pt-12 md:pt-32">
+  <div class=" flex justify-center items-center pb-8"> 
+    <h3 class="text-3xl md:text-6xl mb-12 border-b-4 pb-2 px-2 w-fit">Our services</h3>
+</div>
+  <div class="flex justify-center items-center">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 justify-center lg:grid-cols-3 max-w-[1300px]"
+    >
+      {% for i in data %}
+
+      <div
+        data-aos="flip-left"
+        data-aos-duration="1000"
+        class="group relative mb-12 rounded-xl overflow-hidden cursor-pointer font-mono text-secondary hover:text-white"
+      >
+        <div
+          class="absolute text-4xl group-hover:duration-500 -translate-x-12 w-full h-full"
+        >
+          <h2 class="flex items-center justify-center h-full">
+            <span
+              aria-hidden="true"
+              class="ml-1 group-hover:translate-x-12 group-hover:duration-500 group-hover:bg-white/70 rounded-full w-10 h-10 flex justify-center items-center text-black p-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="{1.5}"
+                stroke="currentColor"
+                class="w-6 h-6 text-white hidden group-hover:block group-hover:text-black"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </span>
+          </h2>
+        </div>
+
+        <div class="">
+          <div
+            class="border m-2 p-4 rounded-lg flex flex-col justify-start items-center group-hover:border-black hover:delay-200 h-80 xl:h-64 group-hover:bg-gradient-to-b from-black/10 to-black/70"
+          >
+            <div
+              class="bg-primary w-12 h-12 rounded-full text-primary text-lg p-2 my-2"
+            >
+              {{i.svg|safe}}
+            </div>
+
+            <p class="text-center text-3xl py-2">{{i.service}}</p>
+            <p class="text-center">{{i.about_service}}</p>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+
+  
+</div>

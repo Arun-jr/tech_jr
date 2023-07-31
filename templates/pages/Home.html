@@ -1,0 +1,20 @@
+{% extends "index.html" %} 
+
+{% load static %} 
+
+{% block content %}
+
+
+
+  {% include 'components/home/top-quality.html'%}  
+  {% include 'components/home/tech-company.html'%}
+  {% include 'components/services/service-contents.html'%} 
+  {% include 'components/about-us/about-content.html'%} 
+  {% include 'components/about-us/best.html'%} 
+  {% include 'components/contact-us/contact-us-form.html'%}
+
+
+
+<script src="{% static 'index.js' %}"></script>
+
+{% endblock %}

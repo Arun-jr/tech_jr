@@ -1,0 +1,47 @@
+{% load static %}
+
+<div class="pt-12  text-secondary border-t">
+  <div class="pb-12">
+    <p class="text-2xl md:text-4xl text-center mb-3">Interested in working with us ?</p>
+    <p class="text-xl md:text-2xl text-center my-3">
+      call us now :
+      <!-- href="tel:86677 44564"  -->
+      <a 
+   
+      class="hover:text-black">
+        +91 XXXX XXXXX
+      </a>
+    </p>
+  </div>
+
+  <div class="pb-12 text-center">
+    <p class="text-2xl md:text-4xl my-3">Subscribe to our newsteller</p>
+    <p class="p-2">
+      Subscribe our newsletter gor get notification about new updates, etc...
+    </p>
+    <form class="flex items-center justify-center my-5 " method="post" id="footerForm">
+      {% csrf_token %}
+      <div class="flex items-start justify-center  ">
+        <div>
+          <div class="">
+            <input
+              type="email"
+              id="email"
+              class="subscription_email    block border bg-transparent  font-style text-primary  text-[15px] p-2 pb-[9.5px] rounded-l-lg appearance-none focus:outline-none focus:ring-0 peer"
+              placeholder=" you email"
+            />
+            <p id="subemail_error" class=" text-red-800 font-medium mt-2"> </p>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class=" bg-black hover:bg-gray-800  border p-2 rounded-r-lg"
+        >
+          Subscribe
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="{% static 'js/footer.js' %}"></script>

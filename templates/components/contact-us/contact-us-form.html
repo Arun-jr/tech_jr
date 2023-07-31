@@ -1,0 +1,102 @@
+{% load static %}
+<div class="flex justify-center items-center flex-wrap pt-12  md:pt-32">
+  <div class="w-full max-w-[1300px]">
+<div class="px-2   md:px-6 pb-12 md:pb-20 bg-secondary">
+  <div class=" flex justify-center items-center"> 
+    <h3 class="text-3xl md:text-6xl md:mb-12 border-b-4 pb-2 px-2 w-fit">Contact Us</h3>
+</div>
+
+  <div class="flex justify-center items-center">
+    <div class="w-full max-w-[1300px]">
+      <div
+        class="flex justify-center text-center lg:justify-between lg:text-start items-center pt-12 flex-wrap-reverse"
+      >
+        <div class="w-full  lg:w-[70%]">
+          <p class="text-4xl my-2 lg:ml-4">Thank you for your interest.</p>
+          <p class="text-black font-medium pb-6 lg:ml-4">
+            Please fill out the form below to inquire about our work.
+          </p>
+          <form
+            class="bg-secondary flex justify-center lg:justify-start flex-wrap"
+            id="contactForm"
+            method="post"
+          >
+            {% csrf_token %}
+
+            <div class="relative mt-10 w-full mx-4 md:w-[40%]">
+              <input
+                name="name"
+                type="text"
+                placeholder="Name"
+                id="name"
+                class="name border block px-2.5 pb-2.5 appearance-none bg-transparent bg-secondary focus:outline-none focus:ring-0 pt-4 w-full text-[15px] text-secondary rounded-lg peer"
+              />
+              <p id="name_error" class="text-red-800 font-medium  mt-2"> </p>
+            </div>
+
+            <div class="relative mt-10 w-full mx-4 md:w-[40%]">
+              <input
+                name="email"
+                type="email"
+                placeholder="Email"
+                id="email"
+                class="email border block px-2.5 bg-secondary pb-2.5 bg-transparent appearance-none focus:outline-none focus:ring-0 pt-4 w-full text-[15px] text-secondary rounded-lg peer"
+              />
+              <p id="email_error" class="text-red-800 font-medium mt-2"> </p>
+            </div>
+            <div class="relative mt-10 w-full mx-4 md:w-[40%]">
+              <input
+                name="number"
+                type="tel"
+                placeholder="Phone number"
+                id="number"
+                class="number border block px-2.5 bg-secondary pb-2.5 bg-transparent appearance-none focus:outline-none focus:ring-0 pt-4 w-full text-[15px] text-secondary rounded-lg peer"
+              />
+              <p id="number_error" class="text-red-800 font-medium mt-2"> </p>
+            </div>
+            <div class="relative mt-10 w-full mx-4 md:w-[40%]">
+              <input
+                name="organization"
+                type="text"
+                placeholder="organization"
+                id="organization"
+                class="organization border block px-2.5 bg-secondary pb-2.5 bg-transparent appearance-none focus:outline-none focus:ring-0 pt-4 w-full text-[15px] text-secondary rounded-lg peer"
+              />
+              <p id="organization_error" class="text-red-800 font-medium mt-2"> </p>
+
+            </div>
+
+            <div class="relative mt-10 w-full mx-4 md:w-[83%]">
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                id="message"
+                class="message border block px-2.5 pb-2.5 bg-secondary bg-transparent h-32 appearance-none focus:outline-none focus:ring-0 pt-4 w-full text-[15px] text-secondary rounded-lg peer"
+              ></textarea>
+              <p id="message_error" class="text-red-800 font-medium pmt-2"> </p>
+              
+            </div>
+
+            <button
+              type="submit"
+              class="text-center ml-5 shadow-lg shadow-white/40  hover:bg-green-300/30 font-bold border h-14 flex justify-center items-center text-[15px] capitalize rounded-lg my-8 w-[50%] md:w-[30%]"
+            >
+              Contact us
+            </button>
+          </form>
+        </div>
+        <div class="w-full  lg:w-[30%] md:mt-0">
+          <h1 class="text-4xl pb-4 hidden md:block">Contact us</h1>
+          <p class="text-black font-medium text-2xl sm:text-4xl pb-2">+91 XXXXX XXXXX</p>
+          <p>techjr@gmail.com</p>
+          <p>MON - SAT : 9:00 AM - 7:00 PM</p>
+          <p>closed on weekends</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<script src="{% static  'js/contact-form.js' %}"></script>
